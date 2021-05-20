@@ -49,6 +49,7 @@ public class HotelTest {
     public void shouldBeAbleToCheckInGuest(){
         hotel.checkInGuest(guest_1, bedroom_1);
         assertEquals(1, bedroom_1.getNumberOfGuestsInTheRoom());
+        assertEquals(false, bedroom_1.getRoomEmpty());
     }
 
     @Test
@@ -56,6 +57,7 @@ public class HotelTest {
         hotel.checkInGuest(guest_1, bedroom_1);
         hotel.checkOutGuest(guest_1, bedroom_1);
         assertEquals(0, bedroom_1.getNumberOfGuestsInTheRoom());
+        assertEquals(true, bedroom_1.getRoomEmpty());
     }
 
     @Test

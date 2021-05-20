@@ -20,10 +20,12 @@ public class Hotel {
 
     public void checkInGuest(Guest guest, Bedroom bedroom){
        bedroom.addGuestToRoom(guest);
+       bedroom.setRoomEmpty(false);
     }
 
-    public void checkOutGuest(Guest guest_1, Bedroom bedroom_1) {
-        bedroom_1.removeGuestFromRoom();
+    public void checkOutGuest(Guest guest, Bedroom bedroom) {
+        bedroom.removeGuestFromRoom();
+        bedroom.setRoomEmpty(true);
     }
 
     public Booking bookRoom(Bedroom bedroom, int numberOfNights){
