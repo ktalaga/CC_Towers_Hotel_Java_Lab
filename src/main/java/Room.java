@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public abstract class Room {
 
     private ArrayList<Guest> guestsList;
+    private int capacity;
 
     public Room(ArrayList<Guest> guestsList) {
         this.guestsList = new ArrayList<Guest>();
