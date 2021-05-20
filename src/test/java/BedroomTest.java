@@ -8,6 +8,7 @@ public class BedroomTest {
     private Bedroom bedroom_1;
 
 
+
     @Before
     public void before(){
         bedroom_1 = new Bedroom(1, RoomType.SINGLE);
@@ -22,4 +23,6 @@ public class BedroomTest {
     public void shouldHaveType() {
         assertEquals(RoomType.SINGLE, bedroom_1.getRoomType());
     }
+
+
 }

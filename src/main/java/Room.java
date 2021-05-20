@@ -5,7 +5,7 @@ public abstract class Room {
     private ArrayList<Guest> guestsList;
     private int capacity;
 
-    public Room(ArrayList<Guest> guestsList) {
+    public Room() {
         this.guestsList = new ArrayList<Guest>();
     }
 
