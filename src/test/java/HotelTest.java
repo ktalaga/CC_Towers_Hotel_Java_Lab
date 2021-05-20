@@ -14,6 +14,7 @@ public class HotelTest {
     private ConferenceRoom conferenceRoom_1;
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
+    private Guest guest_1;
 
     @Before
     public void before() {
@@ -28,11 +29,23 @@ public class HotelTest {
         conferenceRooms = new ArrayList<>();
         conferenceRooms.add(conferenceRoom_1);
         hotel = new Hotel(bedrooms, conferenceRooms);
+        guest_1 = new Guest("Andy Sharkey");
     }
 
     @Test
     public void shouldHaveBedrooms() {
         assertEquals(3, hotel.getNumberOfBedrooms());
+    }
+
+    @Test
+    public void shouldHaveConferenceRooms() {
+        assertEquals(1, hotel.getNumberOfConferenceRooms());
+    }
+
+    @Test
+    public void shouldBeAbleToCheckInGuest(){
+        this.checkInGuest(guest_1, bedroom_1);
+        assertEquals(1, bedroom_1.getNumberOfGuestsInTheRoom());
     }
 
 

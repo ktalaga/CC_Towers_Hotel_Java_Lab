@@ -24,4 +24,8 @@ public class Bedroom extends Room{
         return this.roomType.getCapacity();
     }
 
+    public void addGuestToRoom(Guest guest){
+        this.guestsList.add(guest);
+    }
+
 }

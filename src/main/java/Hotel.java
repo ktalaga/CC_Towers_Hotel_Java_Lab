@@ -9,8 +9,17 @@ public class Hotel {
         this.bedrooms = bedrooms;
         this.conferenceRooms = conferenceRooms;
     }
-    
+
     public int getNumberOfBedrooms() {
         return this.bedrooms.size();
     }
+
+    public int getNumberOfConferenceRooms() {
+        return this.conferenceRooms.size();
+    }
+
+    public void checkInGuest(Guest guest, Bedroom bedroom){
+       bedroom.addGuestToRoom(guest);
+    }
+
 }

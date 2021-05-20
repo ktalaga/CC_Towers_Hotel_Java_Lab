@@ -13,8 +13,7 @@ public abstract class Room {
         return guestsList;
     }
 
-    public int getNumberOfGuestsInTheRoom(){
-        return this.getGuestsList().size();
+    public void addGuestToRoom(Guest guest){
     }
 
 }
