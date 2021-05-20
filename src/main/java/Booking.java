@@ -15,4 +15,9 @@ public class Booking {
     public int getDuration() {
         return duration;
     }
+
+    public int getTotal() {
+        int total = this.duration * bedroom.getRoomRate();
+        return total;
+    }
 }

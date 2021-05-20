@@ -66,6 +66,12 @@ public class HotelTest {
         assertEquals(1, booking.getBedroom().getRoomNumber());
 
     }
+    @Test
+    public void canCalculateTotalBill() {
+        booking = hotel.bookRoom(bedroom_1, 7);
+        assertEquals(245, booking.getTotal());
+
+    }
 
 
 }
