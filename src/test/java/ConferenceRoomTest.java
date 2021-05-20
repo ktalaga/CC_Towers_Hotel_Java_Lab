@@ -26,4 +26,9 @@ public class ConferenceRoomTest {
     public void conferenceRoomHasCatering() {
         assertEquals(true, conferenceRoom_1.getConferenceRoomCatering());
     }
+
+    @Test
+    public void shouldHave0GuestsAtStart() {
+        assertEquals(0, conferenceRoom_1.getNumberOfGuestsInTheRoom());
+    }
 }
