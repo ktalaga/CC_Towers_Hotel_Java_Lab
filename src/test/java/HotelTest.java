@@ -70,8 +70,14 @@ public class HotelTest {
     public void canCalculateTotalBill() {
         booking = hotel.bookRoom(bedroom_1, 7);
         assertEquals(245, booking.getTotal());
-
     }
 
+    @Test
+    public void canReturnCollectionOfEmptyRooms() {
+    }
 
+    @Test
+    public void roomEmptyShouldStartAsTrue() {
+        assertEquals(true, bedroom_1.getRoomEmpty());
+    }
 }
