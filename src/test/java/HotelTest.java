@@ -80,4 +80,12 @@ public class HotelTest {
     public void roomEmptyShouldStartAsTrue() {
         assertEquals(true, bedroom_1.getRoomEmpty());
     }
+
+    @Test
+    public void shouldChangeRoomEmpty(){
+        bedroom_1.setRoomEmpty(false);
+        assertEquals(false, bedroom_1.getRoomEmpty());
+    }
+
+
 }
