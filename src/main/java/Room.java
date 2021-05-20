@@ -12,4 +12,6 @@ public abstract class Room {
     public ArrayList<Guest> getGuestsList() {
         return guestsList;
     }
+
+
 }

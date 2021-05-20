@@ -24,5 +24,13 @@ public class BedroomTest {
         assertEquals(RoomType.SINGLE, bedroom_1.getRoomType());
     }
 
+    @Test
+    public void shouldHaveCapacity() {
+        assertEquals(1, bedroom_1.getRoomCapacity());
+    }
 
+    @Test
+    public void shouldHave0GuestsAtStart() {
+        assertEquals(0, bedroom_1.getNumberOfGuestsInTheRoom());
+    }
 }
