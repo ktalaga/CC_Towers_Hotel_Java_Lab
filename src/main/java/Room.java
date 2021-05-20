@@ -22,4 +22,9 @@ public abstract class Room {
     public void addGuestToRoom(Guest guest){
         this.guestsList.add(guest);
     }
+
+    public void removeGuestFromRoom(){
+        this.guestsList.clear();
+    }
+
 }
