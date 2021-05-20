@@ -12,8 +12,14 @@ public abstract class Room {
     public ArrayList<Guest> getGuestsList() {
         return guestsList;
     }
+//
+//    public void addGuestToRoom(Guest guest){
+//    }
 
-    public void addGuestToRoom(Guest guest){
+    public int getNumberOfGuestsInTheRoom() {
+        return this.getGuestsList().size();
     }
-
+    public void addGuestToRoom(Guest guest){
+        this.guestsList.add(guest);
+    }
 }

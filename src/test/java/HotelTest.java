@@ -44,8 +44,9 @@ public class HotelTest {
 
     @Test
     public void shouldBeAbleToCheckInGuest(){
-        this.checkInGuest(guest_1, bedroom_1);
+        hotel.checkInGuest(guest_1, bedroom_1);
         assertEquals(1, bedroom_1.getNumberOfGuestsInTheRoom());
+
     }
 
 
