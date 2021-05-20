@@ -31,4 +31,16 @@ public class ConferenceRoomTest {
     public void shouldHave0GuestsAtStart() {
         assertEquals(0, conferenceRoom_1.getNumberOfGuestsInTheRoom());
     }
+
+    @Test
+    public void canSetCapacity() {
+        conferenceRoom_1.setConferenceRoomCapacity(80);
+        assertEquals(80, conferenceRoom_1.getConferenceRoomCapacity());
+    }
+
+    @Test
+    public void canSetCateringStatus() {
+        conferenceRoom_1.setCatering(false);
+        assertEquals(false, conferenceRoom_1.getConferenceRoomCatering());
+    }
 }

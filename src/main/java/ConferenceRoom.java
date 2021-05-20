@@ -15,10 +15,6 @@ public class ConferenceRoom extends Room{
         return name;
     }
 
-    public void setConferenceRoomName(String name) {
-        this.name = name;
-    }
-
     public boolean getConferenceRoomCatering() {
         return catering;
     }
