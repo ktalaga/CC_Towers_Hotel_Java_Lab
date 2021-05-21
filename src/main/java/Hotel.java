@@ -22,8 +22,10 @@ public class Hotel {
     }
 
     public void checkInGuest(Guest guest, Bedroom bedroom){
-       bedroom.addGuestToRoom(guest);
-       bedroom.setRoomEmpty(false);
+            if(bedroom.getRoomEmpty() == true){
+                bedroom.addGuestToRoom(guest);
+                bedroom.setRoomEmpty(false);
+            }
     }
 
     public void checkOutGuest(Guest guest, Bedroom bedroom) {

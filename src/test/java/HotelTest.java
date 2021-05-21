@@ -24,7 +24,7 @@ public class HotelTest {
         bedroom_1 = new Bedroom(1, RoomType.SINGLE);
         bedroom_2 = new Bedroom(2, RoomType.DOUBLE);
         bedroom_3 = new Bedroom(3, RoomType.FAMILY);
-        bedroom_4 = new Bedroom(3, RoomType.FAMILY);
+        bedroom_4 = new Bedroom(4, RoomType.FAMILY);
         bedrooms = new ArrayList<>();
         bedrooms.add(bedroom_1);
         bedrooms.add(bedroom_2);
@@ -39,7 +39,7 @@ public class HotelTest {
 
     @Test
     public void shouldHaveBedrooms() {
-        assertEquals(3, hotel.getNumberOfBedrooms());
+        assertEquals(4, hotel.getNumberOfBedrooms());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class HotelTest {
     }
 
     @Test
-    public void shouldBeAbleToCheckInGuest(){
+    public void shouldBeAbleToCheckInGuestIfRoomEmpty(){
         hotel.checkInGuest(guest_1, bedroom_1);
         assertEquals(1, bedroom_1.getNumberOfGuestsInTheRoom());
         assertEquals(false, bedroom_1.getRoomEmpty());
