@@ -4,10 +4,13 @@ public class Hotel {
 
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
+    private ArrayList<Bedroom> emptyBedrooms;
+
 
     public Hotel(ArrayList<Bedroom> bedrooms, ArrayList<ConferenceRoom> conferenceRooms) {
         this.bedrooms = bedrooms;
         this.conferenceRooms = conferenceRooms;
+        this.emptyBedrooms = new ArrayList<Bedroom>();
     }
 
     public int getNumberOfBedrooms() {
@@ -33,5 +36,14 @@ public class Hotel {
         return booking;
     }
 
+    public int getVacantRooms(){
+        for(Bedroom bedroom : bedrooms){
+            if (bedroom.getRoomEmpty() == true){
+                emptyBedrooms.add(bedroom);
+
+            }
+        }return emptyBedrooms.size();
+
+    }
 
 }

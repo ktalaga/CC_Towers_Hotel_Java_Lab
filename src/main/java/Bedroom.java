@@ -37,4 +37,9 @@ public class Bedroom extends Room{
     public void setRoomEmpty(boolean updateRoomEmpty) {
         this.roomEmpty = updateRoomEmpty;
     }
+
+
+
+
+
 }

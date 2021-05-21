@@ -11,6 +11,7 @@ public class HotelTest {
     private Bedroom bedroom_1;
     private Bedroom bedroom_2;
     private Bedroom bedroom_3;
+    private Bedroom bedroom_4;
     private ConferenceRoom conferenceRoom_1;
     private ArrayList<Bedroom> bedrooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
@@ -23,16 +24,17 @@ public class HotelTest {
         bedroom_1 = new Bedroom(1, RoomType.SINGLE);
         bedroom_2 = new Bedroom(2, RoomType.DOUBLE);
         bedroom_3 = new Bedroom(3, RoomType.FAMILY);
+        bedroom_4 = new Bedroom(3, RoomType.FAMILY);
         bedrooms = new ArrayList<>();
         bedrooms.add(bedroom_1);
         bedrooms.add(bedroom_2);
         bedrooms.add(bedroom_3);
+        bedrooms.add(bedroom_4);
         conferenceRoom_1 = new ConferenceRoom("Glendevon", 100, true);
         conferenceRooms = new ArrayList<>();
         conferenceRooms.add(conferenceRoom_1);
         hotel = new Hotel(bedrooms, conferenceRooms);
         guest_1 = new Guest("Andy Sharkey");
-
     }
 
     @Test
@@ -87,6 +89,13 @@ public class HotelTest {
     public void shouldChangeRoomEmpty(){
         bedroom_1.setRoomEmpty(false);
         assertEquals(false, bedroom_1.getRoomEmpty());
+    }
+
+    @Test
+    public void shouldReturnCollectionOfOnlyVacantRooms(){
+
+        hotel.checkInGuest(guest_1, bedroom_1);
+        assertEquals(3, hotel.getVacantRooms());
     }
 
 
